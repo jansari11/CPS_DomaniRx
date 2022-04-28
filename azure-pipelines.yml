@@ -25,5 +25,15 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/CPS_Domani/Dockerfile'
+- task: JFrogBuildPromotion@1
+  inputs:
+    artifactoryConnection: 'PBM Jfrog Artifactory Publish'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    targetRepo: 'pbm-docker-local'
+    status: 'Released'
+    includeDependencies: true
+    copy: false
+    dryRun: false
         tags: |
           $(tag)
