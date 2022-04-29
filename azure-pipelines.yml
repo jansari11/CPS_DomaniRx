@@ -29,5 +29,4 @@ stages:
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
-        publishLocation: 'FilePath'
-        TargetPath: '\\Louclrcs03dm02\web_pharmacy\RXCM\TFS\Builds\PROD'
+        publishLocation: 'Container'
