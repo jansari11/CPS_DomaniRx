@@ -34,7 +34,7 @@ stages:
         buildNumber: '$(Build.BuildNumber)'
         targetRepo: 'pbm-docker-local'
         status: 'Released'
-        includeDependencies: true
+        includeDependencies: false
         copy: false
         dryRun: true
 
