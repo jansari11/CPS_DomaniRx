@@ -25,3 +25,9 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/CPS_Domani/Dockerfile'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'FilePath'
+        TargetPath: '\\Louclrcs03dm02\web_pharmacy\RXCM\TFS\Builds\PROD'
